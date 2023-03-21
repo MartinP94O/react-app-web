@@ -5,6 +5,7 @@ import { Login } from "./components/Login/Login";
 import { Register } from "./components/Register/Register";
 import { CreateItem } from "./components/CreateItem/CreateItem";
 import { Catalog } from "./components/Catalog/Catalog";
+import { Footer } from "./components/Footer/Footer";
 
 function App() {
   return (
@@ -20,8 +21,13 @@ function App() {
             <Route path="/create-item" element={<CreateItem />} />
             <Route path="/catalog" element={<Catalog />} />
           </Routes>
+
         </main>
       </div>
+      <div>
+        <Footer />
+      </div>
+
     </>
   );
 }
