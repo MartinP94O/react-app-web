@@ -12,17 +12,17 @@ body {
     margin: 8em auto;
 }
 
-header,
-footer {
+header {
     background-color: rgba(125, 49, 148, 0.521);
     width: 100%;
     overflow: hidden;
     color: white;
+
 }
 
 .home {
     font-size: auto;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Bahnschrift, 'Times New Roman', Times, serif;
 }
 
 header {
@@ -39,7 +39,7 @@ header h1 {
 
 header nav {
     font-size: auto;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Bahnschrift, 'Times New Roman', Times, serif;
     position: absolute;
     right: 0;
     bottom: 8px;
@@ -50,10 +50,14 @@ header nav>* {
 }
 
 footer {
-    padding: 0.5em;
+    padding: 0em;
     width: 100%;
     left: 0;
     bottom: 0;
+    background-color: rgba(125, 49, 148, 0.521);
+    margin-top: 242px;
+    color: white;
+    text-align: center;
 }
 
 nav a {

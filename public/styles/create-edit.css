@@ -5,10 +5,10 @@
     height: auto;
     border-radius: 20px;
     padding: 40px;
-    box-sizing: border-box;
+    box-sizing: inherit;
     text-align: center;
-    background: rgba(125, 49, 148, 0.521);
-    box-shadow: 0px 0px 32px 0px purple, -14px -14px 20px #191c21;
+    background: transparent;
+    box-shadow: 0px 0px 32px 15px purple, -14px -14px 20px #191c21;
 }
 
 input[type="text"] {
