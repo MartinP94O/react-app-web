@@ -23,9 +23,7 @@ function App() {
 
         const newGame = await itemService.create(data)
 
-        //TODO add to state
         setItems(state => [...state, newGame])
-        //TODO redirect to catalog
         navigate('/catalog')
     }
   return (
