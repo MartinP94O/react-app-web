@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useNavigate } from "react-router-dom";
 import { Header } from "./components/Header/Header";
 import { Home } from "./components/Home/Home";
 import { Login } from "./components/Login/Login";
@@ -6,8 +6,30 @@ import { Register } from "./components/Register/Register";
 import { CreateItem } from "./components/CreateItem/CreateItem";
 import { Catalog } from "./components/Catalog/Catalog";
 import { Footer } from "./components/Footer/Footer";
+import { useState, useEffect } from "react";
+import * as itemService from "./services/itemsService"
 
 function App() {
+    const navigate = useNavigate()
+    const [games, setItems] = useState([]);
+
+    useEffect(() => {
+        itemService.getAll().then(result => {
+            setItems(result)
+        })
+        console.log(games)
+    }, [])
+
+    const onCreateItemSubmit = async (data) => {
+        console.log(data)
+
+        const newGame = await itemService.create(data)
+
+        //TODO add to state
+        setItems(state => [...state, newGame])
+        //TODO redirect to catalog
+        navigate('/catalog')
+    }
   return (
     <>
       <div id="box">
@@ -18,18 +40,20 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
-            <Route path="/create-item" element={<CreateItem />} />
-            <Route path="/catalog" element={<Catalog />} />
+            <Route path="/create-item" element={<CreateItem onCreateItemSubmit={onCreateItemSubmit}/>} />
+            <Route path="/catalog" element={<Catalog games={games}/>} />
           </Routes>
 
         </main>
       </div>
-      <div>
-        <Footer />
-      </div>
+        <footer>
+            <Footer />
+        </footer>
+
+
 
     </>
   );
 }
 
-export default App;
+export default App

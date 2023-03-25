@@ -6,16 +6,16 @@ export const Header = () => {
 
         <h1><Link className="home" to="/">GamesPlay</Link></h1>
         <nav>
-            <Link to="/catalog">All games</Link>
+            <Link to="/catalog">CATALOG</Link>
 
             <div id="user">
-                <Link to="create-item">Create Game</Link>
-                <Link to="">Logout</Link>
+                <Link to="create-item">CREATE GAME</Link>
+                <Link to="">LOGOUT</Link>
             </div>
 
             <div id="guest">
-                <Link to="/login">Login</Link>
-                <Link to="/register">Register</Link>
+                <Link to="/login">LOGIN</Link>
+                <Link to="/register">REGISTER</Link>
             </div>
         </nav>
     </header>
