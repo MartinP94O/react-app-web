@@ -11,17 +11,15 @@ import * as itemService from "./services/itemsService"
 
 function App() {
     const navigate = useNavigate()
-    const [games, setItems] = useState([]);
+    const [items, setItems] = useState([]);
 
     useEffect(() => {
         itemService.getAll().then(result => {
             setItems(result)
         })
-        console.log(games)
     }, [])
 
     const onCreateItemSubmit = async (data) => {
-        console.log(data)
 
         const newGame = await itemService.create(data)
 
@@ -41,7 +39,7 @@ function App() {
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
             <Route path="/create-item" element={<CreateItem onCreateItemSubmit={onCreateItemSubmit}/>} />
-            <Route path="/catalog" element={<Catalog games={games}/>} />
+            <Route path="/catalog" element={<Catalog items={items}/>} />
           </Routes>
 
         </main>
