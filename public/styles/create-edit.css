@@ -8,7 +8,7 @@
     box-sizing: inherit;
     text-align: center;
     background: transparent;
-    box-shadow: 0px 0px 32px 15px purple, -14px -14px 20px #191c21;
+    box-shadow: 0px 0px 32px 15px #019EED, -14px -14px 20px #019EED;
 }
 
 input[type="text"] {
@@ -19,7 +19,7 @@ input[type="text"] {
     margin-top: 10px;
     font-size: 24px;
     border-radius: 50px;
-    box-shadow: inset 6px 6px 6px purple, inset -6px -6px 6px white;
+    box-shadow: 0px 0px 32px 0px #019EED, -4px -4px 20px #019EED;
 }
 
 textarea {

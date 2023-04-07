@@ -1,6 +1,7 @@
 import { CatalogItem } from "./CatalogItem/CatalogItem"
 
 export const Catalog = ({items}) => {
+
     return (
         <section id="catalog-page">
             <h1>All Games</h1>

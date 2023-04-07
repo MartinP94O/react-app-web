@@ -1,23 +1,23 @@
 #login-page {
     position: relative;
-    width: 650px;
+    width: 600px;
     height: auto;
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
     background: transparent;
-    box-shadow: 0px 0px 32px 15px purple, -14px -14px 20px #191c21;
+    box-shadow: 0px 0px 32px 15px #019EED, -14px -14px 20px #019EED;
 }
 
 #register-page {
     position: relative;
-    width: 650px;
+    width: 600px;
     height: auto;
     border-radius: 20px;
     padding: 40px;
-    box-sizing: border-box;
+    box-sizing: inherit;
     background: transparent;
-    box-shadow: 0px 0px 32px 15px purple, -14px -14px 20px #191c21;
+    box-shadow: 0px 0px 32px 15px #019EED, -14px -14px 20px #019EED;
 }
 
 .container {
@@ -25,9 +25,9 @@
 }
 
 .brand-logo {
-    height: 100px;
-    width: 100px;
-    background: url("../images/icon-gamepad-2.png");
+    height: 95px;
+    width: 95px;
+    background: url("../images/login-icon-3054.png");
     margin: auto;
     border-radius: 50%;
     box-sizing: border-box;
@@ -68,7 +68,7 @@ label:nth-of-type(2) {
 }
 
 input::placeholder {
-    color: rgba(184, 179, 179, 0.678);
+    color: rgba(221,233,228,0.30);
 }
 
 
@@ -80,14 +80,14 @@ input[type="nickname"],
 input[type="password"],
 input[type="number"],
 input[type="email"] {
-    background: #ecf0f3;
-    padding: 30px;
+    background: rgba(52,189,210,0.30);
+    padding: 10px;
     padding-left: 20px;
     height: 50px;
     margin-top: 10px;
     font-size: 24px;
     border-radius: 50px;
-    box-shadow: inset 6px 6px 6px #c0c2c5, inset -6px -6px 6px white;
+    box-shadow: 0px 0px 32px 15px #019EED, -4px -4px 20px #019EED;
 }
 
 label[for="terms"]>input {
@@ -96,20 +96,20 @@ label[for="terms"]>input {
 
 .btn.submit {
     margin-top: 30px;
-    background: rgb(207, 148, 37);
+    background: rgb(0, 218, 242);
     height: 60px;
     border-radius: 20px;
     color: white;
     font-size: 26px;
     cursor: pointer;
     font-weight: 900;
-    box-shadow: 6px 6px 6px orange, -6px -6px 6px orange;
+    box-shadow: 6px 6px 6px #0072D2, -6px -6px 6px #0072D2;
     transition: 0.5s;
 }
 
 .btn.submit:hover {
-    color: orange;
-    background-color: orange;
+    color: #0072D2;
+    box-shadow: 15px 15px 15px #0072D2, -15px -15px 15px #0072D2;
 }
 
 .container {

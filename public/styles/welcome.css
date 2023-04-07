@@ -82,7 +82,7 @@
     border-radius: 15px;
     float: left;
     height: auto;
-    color: rgb(204, 144, 131);
+    color: lightskyblue;
 }
 
 .image-wrap {
@@ -158,7 +158,7 @@
 }
 
 #home-page>h1 {
-    color: rgb(252, 168, 151);
+    color: lightskyblue;
     text-align: center;
     font-weight: 700;
     font-size: 84px;

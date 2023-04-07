@@ -51,6 +51,7 @@ a {
     color: inherit;
 }
 
+
 blockquote {
     font-style: italic;
     margin: 0.5em;
@@ -61,4 +62,14 @@ blockquote>cite {
     text-align: right;
     margin: 0.5em 2em;
     font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: rgba(1, 158, 237, 0.521);
+    margin-top: 550px;
+    color: white;
+    text-align: center;
 }

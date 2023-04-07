@@ -1,29 +1,39 @@
-import * as request from "./requester"
+import { requestFactory } from "./requester";
 
-const baseUrl = 'http://localhost:3030/jsonstore/items'
+const baseUrl = "http://localhost:3030/data/items";
 
-export const getAll = async () => {
-    const result  = await request.get(baseUrl)
-    const items = Object.values(result)
+export const itemServiceFactory = (token) => {
+  const request = requestFactory(token);
 
-    return items
-}
+  const getAll = async () => {
+    const result = await request.get(baseUrl);
+    const items = Object.values(result);
 
-export const getOne = async (itemId) => {
+    return items;
+  };
+
+  const getOne = async (itemId) => {
     const result = await request.get(`${baseUrl}/${itemId}`);
-    console.log(result)
-    return result
-}
 
-export const create = async (ietmData) => {
-    const result = await request.post(baseUrl, ietmData);
+    return result;
+  };
 
-    console.log(result)
-    return result
-}
+  const create = async (itemData) => {
+    const result = await request.post(baseUrl, itemData);
 
-export const addComment = async (itemId, data) => {
-    const result = await request.post(`${baseUrl}/${itemId}/comments`, data)
+    return result;
+  };
 
-    return result
-}
+  const edit = (itemId, data) => request.put(`${baseUrl}/${itemId}`, data);
+
+  //TODO change name
+  const deleteItem = (itemId) => request.delete(`${baseUrl}/${itemId}`);
+
+  return {
+    getAll,
+    getOne,
+    create,
+    edit,
+    delete: deleteItem,
+  };
+};
