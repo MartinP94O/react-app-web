@@ -65,16 +65,6 @@ function App() {
     setAuth({});
   };
 
-  const contextValues = {
-    onRegisterSubmit,
-    onLoginSubmit,
-    onLogout,
-    userId: auth._id,
-    token: auth.accessToken,
-    userEmail: auth.email,
-    isAuthenticated: !!auth.accessToken,
-  };
-
   const onCreateItemSubmit = async (data) => {
     const newGame = await itemService.create(data);
 
@@ -89,6 +79,22 @@ function App() {
 
     navigate(`/catalog/${values._id}`);
   };
+
+  const whenDeleted = (itemId) => {
+    setItems(state => state.filter(item => item._id !== itemId));
+  }
+
+  const contextValues = {
+    whenDeleted,
+    onRegisterSubmit,
+    onLoginSubmit,
+    onLogout,
+    userId: auth._id,
+    token: auth.accessToken,
+    userEmail: auth.email,
+    isAuthenticated: !!auth.accessToken,
+  };
+
 
 
   return (

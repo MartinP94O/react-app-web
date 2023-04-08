@@ -8,7 +8,7 @@ import {useService} from "../../hooks/useService";
 export const ItemDetails = () => {
     const { itemId } = useParams();
     const [item, setItem] = useState({});
-    const {userId} = useContext(AuthContext)
+    const {userId, whenDeleted} = useContext(AuthContext)
     const itemService = useService(itemServiceFactory)
     const navigate = useNavigate()
 
@@ -23,9 +23,15 @@ export const ItemDetails = () => {
     const isOwner = item._ownerId === userId
 
     const onDeleteClick = async () => {
-        await itemService.delete(item._id)
+        const result = window.confirm(`Are you sure you want to delete ${item.title}`);
 
-        navigate('/catalog')
+        if (result) {
+            await itemService.delete(item._id);
+
+            whenDeleted(item._id);
+
+            navigate('/catalog');
+        }
     }
 
     return (
