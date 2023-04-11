@@ -11,6 +11,7 @@ export const ItemDetails = () => {
     const {userId, whenDeleted} = useContext(AuthContext)
     const itemService = useService(itemServiceFactory)
     const navigate = useNavigate()
+    const { isAuthenticated } = useContext(AuthContext);
 
 
     useEffect(() => {
@@ -34,6 +35,7 @@ export const ItemDetails = () => {
         }
     }
 
+
     return (
         <section id="game-details">
             <h1>Item Details</h1>
@@ -47,6 +49,12 @@ export const ItemDetails = () => {
 
                 <p className="text">{item.summary}</p>
 
+                {isAuthenticated && (
+                    <Link to={`/buy/${item._id}`} className="button">
+                        Buy
+                    </Link>
+                )}
+
                 {isOwner && (
                     <div className="buttons">
                         <Link to={`/catalog/${item._id}/edit`} className="button">
@@ -55,7 +63,11 @@ export const ItemDetails = () => {
                         <button className="button" onClick={onDeleteClick}>
                             Delete
                         </button>
-                    </div>)}
+                    </div>
+                    )
+                }
+
+
 
             </div>
 

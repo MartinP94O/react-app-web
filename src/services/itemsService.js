@@ -26,7 +26,7 @@ export const itemServiceFactory = (token) => {
 
   const edit = (itemId, data) => request.put(`${baseUrl}/${itemId}`, data);
 
-  //TODO change name
+
   const deleteItem = (itemId) => request.delete(`${baseUrl}/${itemId}`);
 
   return {

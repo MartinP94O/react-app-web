@@ -17,6 +17,8 @@ import { itemServiceFactory } from "./services/itemsService";
 import {Logout} from "./components/Logout/Logout";
 import {Profile} from "./components/Profile/Profile";
 import {authServiceFactory} from "./services/authService";
+import {About} from "./components/About/About";
+import {BuyItem} from "./components/BuyItem/BuyItem";
 
 function App() {
   const navigate = useNavigate();
@@ -119,6 +121,8 @@ function App() {
               path="/catalog/:itemId/edit"
               element={<EditItem onItemEditSubmit={onItemEditSubmit} />}
             />
+            <Route path="/about" element={<About />} />
+            <Route path="/buy/:itemId" element={<BuyItem />} />
           </Routes>
         </main>
       </div>
