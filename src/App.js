@@ -19,6 +19,7 @@ import {Profile} from "./components/Profile/Profile";
 import {authServiceFactory} from "./services/authService";
 import {About} from "./components/About/About";
 import {BuyItem} from "./components/BuyItem/BuyItem";
+import {EditProfile} from "./components/EditProfile/EditProfile";
 
 function App() {
   const navigate = useNavigate();
@@ -67,6 +68,11 @@ function App() {
     setAuth({});
   };
 
+  // const onProfileEdit = async (data) => {
+  //   const result = await authService.edit(data);
+  //
+  // }
+
   const onCreateItemSubmit = async (data) => {
     const newGame = await itemService.create(data);
 
@@ -91,10 +97,12 @@ function App() {
     onRegisterSubmit,
     onLoginSubmit,
     onLogout,
+    // onProfileEdit,
     userId: auth._id,
     token: auth.accessToken,
     userEmail: auth.email,
     isAuthenticated: !!auth.accessToken,
+    username: auth.username,
   };
 
 
@@ -111,6 +119,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path='/logout' element={<Logout />} />
             <Route path='/profile' element={<Profile />} />
+            {/*<Route path='/profile/:userId' element={<EditProfile onProfileEdit={onProfileEdit}/>} />*/}
             <Route
               path="/create-item"
               element={<CreateItem onCreateItemSubmit={onCreateItemSubmit} />}

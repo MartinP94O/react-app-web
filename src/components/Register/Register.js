@@ -11,6 +11,8 @@ export const Register = () => {
       email: "",
       password: "",
       confirmPassword: "",
+      username: "",
+      address: ""
     },
     onRegisterSubmit
   );
@@ -22,29 +24,40 @@ export const Register = () => {
           <div className="brand-logo"></div>
           <h1>Register</h1>
 
-          <label htmlFor="email">Email:</label>
+          <label htmlFor="username">Name</label>
+          <input
+              type="username"
+              id="username"
+              name="username"
+              placeholder="Name and surname"
+              value={values.username}
+              onChange={changeHandler}
+          />
+          <label htmlFor="email">Email</label>
           <input
             type="email"
             id="email"
             name="email"
-            placeholder="maria@email.com"
+            placeholder="user@email.com"
             value={values.email}
             onChange={changeHandler}
           />
 
-          <label htmlFor="pass">Password:</label>
+          <label htmlFor="pass">Password</label>
           <input
             type="password"
             name="password"
+            placeholder="Enter password"
             id="register-password"
             value={values.password}
             onChange={changeHandler}
           />
 
-          <label htmlFor="con-pass">Confirm Password:</label>
+          <label htmlFor="con-pass">Confirm Password</label>
           <input
             type="password"
             name="confirmPassword"
+            placeholder="Repeat password"
             id="confirm-password"
             value={values.confirmPassword}
             onChange={changeHandler}

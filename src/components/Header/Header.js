@@ -12,7 +12,6 @@ export const Header = () => {
         <h1><Link className="home" to="/">Change The Name</Link></h1>
         <nav>
             <Link to="/catalog">CATALOG</Link>
-            <Link to="/about">ABOUT</Link>
 
             {isAuthenticated && (
                 <div id="user">
@@ -21,6 +20,7 @@ export const Header = () => {
                     <Link to="/logout">LOGOUT</Link>
                 </div>
             )}
+            <Link to="/about">ABOUT</Link>
 
             {!isAuthenticated && (
                 <div id="guest">

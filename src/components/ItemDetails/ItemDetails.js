@@ -43,7 +43,7 @@ export const ItemDetails = () => {
                 <div className="game-header">
                     <img className="game-img" src={item.imageUrl} />
                     <h1>{item.title}</h1>
-                    <span className="levels">MaxLevel: {item.maxLevel}</span>
+                    <span className="levels">MaxLevel: {item.price}</span>
                     <p className="type">{item.category}</p>
                 </div>
 

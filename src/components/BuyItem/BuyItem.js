@@ -11,6 +11,13 @@ export const BuyItem = () => {
     const { itemId } = useParams();
     const {whenDeleted} = useContext(AuthContext)
     const navigate = useNavigate()
+    const {values, changeHandler} = useForm({
+        city: '',
+        street: '',
+        building: '',
+        phone: '',
+    })
+
 
     const onBuyClick = (e) => {
         e.preventDefault()
@@ -28,21 +35,21 @@ export const BuyItem = () => {
                 <div className="container">
 
                     <h1>Address</h1>
-                    <label htmlFor="leg-title">Legendary title:</label>
-                    <input type="text" id="title" name="title" placeholder="Enter item title..." />
+                    <label htmlFor="leg-title">City</label>
+                    <input type="text" id="title" name="city" placeholder="City name" value={values.city} onChange={changeHandler}/>
 
-                    <label htmlFor="category">Category:</label>
-                    <input type="text" id="category" name="category" placeholder="Enter item category..." />
+                    <label htmlFor="category">Street</label>
+                    <input type="text" id="category" name="street" placeholder="Enter item category..." value={values.street} onChange={changeHandler}/>
 
-                    <label htmlFor="levels">MaxLevel:</label>
-                    <input type="number" id="maxLevel" name="maxLevel" min="1" placeholder="1" />
+                    <label htmlFor="game-img">Building</label>
+                    <input type="text" id="imageUrl" name="building" placeholder="Enter building number" value={values.building} onChange={changeHandler}/>
 
-                    <label htmlFor="game-img">Image:</label>
-                    <input type="text" id="imageUrl" name="imageUrl" placeholder="Upload a photo..." />
+                    <label htmlFor="levels">Phone number</label>
+                    <input type="number" id="maxLevel" name="phone" min="1" placeholder="Enter phone number" value={values.phone} onChange={changeHandler}/>
 
-                    <label htmlFor="summary">Summary:</label>
-                    <textarea name="summary" id="summary" placeholder="Write something." ></textarea>
-                    <input className="btn submit" type="submit" value="Create Game"/>
+                    <input className="btn submit" type="submit" value="Buy" disabled={
+                        !values.city || !values.street || !values.building || !values.phone
+                    }/>
                 </div>
             </form>
         </section>
