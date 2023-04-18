@@ -48,11 +48,12 @@
     font-weight: 400;
 }
 
-.levels {
+.price {
     display: inline-block;
     margin-top: 15px;
     color: white;
     padding: 7px;
+    font-size: 45px;
 }
 
 .type {
@@ -67,8 +68,8 @@
     float: left;
     margin-left: 15px;
     margin-right: 22px;
-    height: 220px;
-    border-radius: 50%;
+    height: 360px;
+    border-radius: 28%;
 }
 
 .info-section>.text {
@@ -109,7 +110,7 @@
 
 .button {
     height: 15%;
-    background-color: #54557b;
+    background-color: #019EED;
     padding: 14px;
     margin-top: auto;
     font-size: 21px;
@@ -117,7 +118,12 @@
 }
 
 .button:hover {
-    background-color: #6f5d9c;
+    background-color: rgb(0, 218, 242);
     color: white;
+}
+
+.sd {
+    margin-left: 400px;
+    margin-right: 300px;
 }
 

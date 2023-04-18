@@ -12,7 +12,6 @@ export const Profile = () => {
                 <h6>Email: {userEmail}</h6>
                 <h6>Name: {username}</h6>
             </div>
-            {/*<Link to={`/profile/${userid}`} className="button">Edit</Link>*/}
 
         </div>
     )

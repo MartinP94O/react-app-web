@@ -9,7 +9,7 @@ export const Header = () => {
     return (
         <header>
 
-        <h1><Link className="home" to="/">Change The Name</Link></h1>
+        <h1><Link className="home" to="/">POST BOARD </Link></h1>
         <nav>
             <Link to="/catalog">CATALOG</Link>
 

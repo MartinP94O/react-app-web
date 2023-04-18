@@ -21,21 +21,22 @@ export const Login = () => {
             <form id="login" method="POST" onSubmit={onSubmit}>
                 <div className="container">
                     <div className="brand-logo"></div>
-                    <h1>Login</h1>
-                    <label htmlFor="email">Email:</label>
+                    <h1>LOGIN</h1>
+                    <label htmlFor="email"/>
                     <input
                         type="email"
                         id="email"
-                        placeholder="Sokka@gmail.com"
+                        placeholder="Enter email"
                         name={LoginFormKeys.Email}
                         value={values[LoginFormKeys.Email]}
                         onChange={changeHandler}
                     />
 
-                    <label htmlFor="login-pass">Password:</label>
+                    <label htmlFor="login-pass"/>
                     <input
                         type="password"
                         id="login-password"
+                        placeholder="Enter password"
                         name={LoginFormKeys.Password}
                         value={values[LoginFormKeys.Password]}
                         onChange={changeHandler}

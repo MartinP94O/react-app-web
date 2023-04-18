@@ -4,7 +4,7 @@ export const Catalog = ({items}) => {
 
     return (
         <section id="catalog-page">
-            <h1>All Games</h1>
+            <h1>GAMES CATALOG</h1>
             {items.map(x =>
                 <CatalogItem key={x._id} {...x}/>
             )}

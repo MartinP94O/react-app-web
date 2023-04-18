@@ -68,10 +68,11 @@ function App() {
     setAuth({});
   };
 
-  // const onProfileEdit = async (data) => {
-  //   const result = await authService.edit(data);
-  //
-  // }
+  const onProfileEdit = async (data) => {
+    const result = await authService.edit(data);
+
+    setAuth((state) => [...state, result]);
+  }
 
   const onCreateItemSubmit = async (data) => {
     const newGame = await itemService.create(data);
@@ -119,7 +120,7 @@ function App() {
             <Route path="/register" element={<Register />} />
             <Route path='/logout' element={<Logout />} />
             <Route path='/profile' element={<Profile />} />
-            {/*<Route path='/profile/:userId' element={<EditProfile onProfileEdit={onProfileEdit}/>} />*/}
+            <Route path='/profile/:userId' element={<EditProfile onProfileEdit={onProfileEdit}/>} />
             <Route
               path="/create-item"
               element={<CreateItem onCreateItemSubmit={onCreateItemSubmit} />}

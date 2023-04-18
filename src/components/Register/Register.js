@@ -22,28 +22,28 @@ export const Register = () => {
       <form id="register" method="post" onSubmit={onSubmit}>
         <div className="container">
           <div className="brand-logo"></div>
-          <h1>Register</h1>
+          <h1>REGISTER</h1>
 
-          <label htmlFor="username">Name</label>
+          <label htmlFor="username"/>
           <input
               type="username"
               id="username"
               name="username"
-              placeholder="Name and surname"
+              placeholder="Enter name"
               value={values.username}
               onChange={changeHandler}
           />
-          <label htmlFor="email">Email</label>
+          <label htmlFor="email"/>
           <input
             type="email"
             id="email"
             name="email"
-            placeholder="user@email.com"
+            placeholder="Enter email"
             value={values.email}
             onChange={changeHandler}
           />
 
-          <label htmlFor="pass">Password</label>
+          <label htmlFor="pass"/>
           <input
             type="password"
             name="password"
@@ -53,7 +53,7 @@ export const Register = () => {
             onChange={changeHandler}
           />
 
-          <label htmlFor="con-pass">Confirm Password</label>
+          <label htmlFor="con-pass"/>
           <input
             type="password"
             name="confirmPassword"

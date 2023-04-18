@@ -37,30 +37,30 @@ export const ItemDetails = () => {
 
 
     return (
-        <section id="game-details">
-            <h1>Item Details</h1>
-            <div className="info-section">
+        <section id="sd">
+            <h1>Details</h1>
+            <div className="section">
                 <div className="game-header">
-                    <img className="game-img" src={item.imageUrl} />
+                    <img className="game-img" src={`${item.imageUrl}`}  />
                     <h1>{item.title}</h1>
-                    <span className="levels">MaxLevel: {item.price}</span>
                     <p className="type">{item.category}</p>
+                    <span className="price">{item.price} $</span>
                 </div>
 
                 <p className="text">{item.summary}</p>
 
                 {isAuthenticated && (
-                    <Link to={`/buy/${item._id}`} className="button">
+                    <Link to={`/buy/${item._id}`} className="button" id="btn">
                         Buy
                     </Link>
                 )}
 
                 {isOwner && (
                     <div className="buttons">
-                        <Link to={`/catalog/${item._id}/edit`} className="button">
+                        <Link to={`/catalog/${item._id}/edit`} className="button" id="btn">
                             Edit
                         </Link>
-                        <button className="button" onClick={onDeleteClick}>
+                        <button className="button" id="delete-btn" onClick={onDeleteClick}>
                             Delete
                         </button>
                     </div>

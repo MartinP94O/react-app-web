@@ -38,15 +38,15 @@
 }
 
 .allGames-info>img {
-    margin-top: -10px;
-    border-radius: 50%;
-    height: 140px;
-    position: absolute;
-    top: 30px;
+    argin-top: -10px;
+    border-radius: 18%;
+    height: 188px;
+    position: initial;
+    top: 38px;
     right: 30px;
     float: right;
     padding: 5px;
-    width: 140px;
+    width: 213px;
 }
 
 .allGames-info>h6 {

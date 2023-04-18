@@ -36,7 +36,7 @@ li {
     list-style-position: inside;
 }
 
-button {
+button.btn {
     font-weight: bold;
     padding: 0.2em;
     margin: 0.2em;
@@ -73,4 +73,9 @@ footer {
     margin-top: 550px;
     color: white;
     text-align: center;
+    position: fixed;
+}
+
+#home {
+    border: white;
 }
